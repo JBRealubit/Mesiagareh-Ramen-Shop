@@ -1,0 +1,226 @@
+body {
+    margin: 0px;
+    font-family: arial;
+}
+
+.navbar {
+    background-color: black;
+    height: 85px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 20px; 
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+#logo-div img {
+    max-width: 100%;
+    height: auto; 
+    max-height: 70px;
+}
+
+#nav-div {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow the nav items to wrap */
+    justify-content: center; /* Center the nav items */
+}
+
+#nav-div a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 15px;
+    line-height: 85px;
+    height: 85px; 
+    transition: 0.3s;
+}
+
+#nav-div a:hover {
+    background-color: #444; 
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-images {
+    display: flex;
+    width: 500%; /* For 5 images */
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-image {
+    width: 20%; /* 1/5 of the container for 5 images */
+    height: 100%;
+}
+
+.slider-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Navigation buttons (arrows) */
+.nav-label {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.nav-left {
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.nav-right {
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+/* Radio buttons changing images */
+#slide1:checked ~ .slider-images {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .slider-images {
+    transform: translateX(-20%);
+}
+
+#slide3:checked ~ .slider-images {
+    transform: translateX(-40%);
+}
+
+#slide4:checked ~ .slider-images {
+    transform: translateX(-60%);
+}
+
+#slide5:checked ~ .slider-images {
+    transform: translateX(-80%);
+}
+
+/* Ensure slider wraps correctly when on mobile */
+@media (max-width: 768px) {
+    header {
+        height: 400px;
+    }
+
+    .slider-images {
+        width: 400%; /* 4 images visible on mobile */
+    }
+
+    .slider-image {
+        width: 50%; /* 50% of the container for each image on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 300px;
+    }
+
+    .slider-images {
+        width: 300%;
+    }
+
+    .slider-image {
+        width: 100%;
+    }
+}
+
+/* Main content styling */
+main {
+    padding: 100px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em; /* Default size */
+}
+
+h2 {
+    font-size: 1.3em; /* Default size */
+    line-height: 1.6;
+    font-weight: lighter;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em; /* Adjust font size on small screens */
+    }
+
+    h2 {
+        font-size: 1em; /* Adjust font size on small screens */
+    }
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+#footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#footer-logo img {
+    max-width: 250px;
+    height: auto;
+}
+
+#footer-text p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#footer-text a {
+    color: white;
+    text-decoration: none;
+}
+
+#footer-text a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #footer-content {
+        flex-direction: column; /* Stack footer items vertically on smaller screens */
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    #footer-logo {
+        margin-bottom: 10px; /* Add space between logo and text */
+    }
+
+    #footer-text p {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+}

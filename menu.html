@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Mesiah Gareh Ramen</title>
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <style type="text/css">
+        body {
+            margin: 0;
+            font-family: arial;
+        }
+
+        .navbar {
+            background-color: black;
+            height: 85px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            padding: 0 20px; 
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+        }
+
+        #logo-div img {
+            max-width: 100%;
+            height: auto; 
+            max-height: 70px;
+        }
+
+        #nav-div {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap; /* Allow the nav items to wrap */
+            justify-content: center; /* Center the nav items */
+        }
+
+        #nav-div a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 0 15px;
+            line-height: 85px;
+            height: 85px; 
+            transition: 0.3s;
+        }
+
+        #nav-div a:hover {
+            background-color: #444; 
+        }
+
+        main {
+            padding: 100px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em; /* Default size */
+        }
+
+        h2 {
+            font-size: 1.3em; /* Default size */
+            line-height: 1.6;
+            font-weight: lighter;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em; /* Adjust font size on small screens */
+            }
+
+            h2 {
+                font-size: 1em; /* Adjust font size on small screens */
+            }
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .menu-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px); /* Add a hover effect */
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .description {
+            padding: 10px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .description h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .description p {
+            font-size: 1em;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        #footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        #footer-logo img {
+            max-width: 250px;
+            height: auto;
+        }
+
+        #footer-text p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        #footer-text a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #footer-text a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            #footer-content {
+                flex-direction: column; /* Stack footer items vertically on smaller screens */
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            #footer-logo {
+                margin-bottom: 10px; /* Add space between logo and text */
+            }
+
+            #footer-text p {
+                font-size: 12px; /* Adjust font size for smaller screens */
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div id="logo-div">
+            <img src="images/Realubit_LE3-On Typefaces_Project File white.png" alt="logo">
+        </div>
+
+        <div id="nav-div">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about us.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact us.html">Contact Us</a>
+        </div> 
+    </nav>
+
+    <main>
+        <h1>Menu</h1>
+
+            <h2>At Mesiagareh Ramen, we offer a diverse menu that caters to all ramen lovers. Our carefully curated selection features classic favorites like Tonkotsu, Shoyu, and Miso ramen, alongside creative options such as Curry ramen. Each dish is crafted with rich, flavorful broths, tender noodles, and a variety of premium toppings. You can also customize your bowl with extra ingredients like soft-boiled eggs, chashu pork, or vegetables to make your meal uniquely yours. Whether you're craving something traditional or adventurous, our menu promises a satisfying experience with every bite!</h2>  
+    </main>
+
+    <section class="menu">
+        <div class="menu-item">
+            <img src="images/miso.png" alt="Menu Item 1">
+            <div class="description">
+                <h3>Miso Ramen</h3>
+                <p>
+                    Miso ramen is a hearty Japanese noodle soup characterized by its rich, savory broth made from miso paste, which adds a deep umami flavor. It is typically served with toppings such as sliced pork, green onions, bamboo shoots, and a soft-boiled egg, offering a satisfying and warming meal.</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="images/shoi salt.png" alt="Menu Item 2">
+            <div class="description">
+                <h3>Shio (Salt) Ramen</h3>
+                <p>
+                    Shio ramen features a light, clear broth flavored with salt, creating a delicate and refreshing taste. The dish is typically accompanied by toppings like tender pork, seaweed, green onions, and a soft-boiled egg, offering a balanced and savory experience.</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="images/shoyu.png" alt="Menu Item 3">
+            <div class="description">
+                <h3>Shoyu (Soy-sauce) Ramen</h3>
+                <p>
+                    Shoyu ramen is a flavorful Japanese noodle soup with a broth made from soy sauce, giving it a savory, slightly tangy taste. It is often garnished with toppings like sliced pork, green onions, bamboo shoots, and a soft-boiled egg, creating a rich and satisfying dish.</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="images/tonkatsu pork ramen.png" alt="Menu Item 4">
+            <div class="description">
+                <h3>Tonkotsu (Pork) Ramen</h3>
+                <p>Tonkotsu ramen features a rich, creamy broth made by simmering pork bones for hours, resulting in a deep, savory flavor. It is typically served with toppings such as tender chashu pork, green onions, mushrooms, and a soft-boiled egg, offering a hearty and indulgent meal.</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="images/curry rammen.png" alt="Menu Item 5">
+            <div class="description">
+                <h3>Curry Ramen</h3>
+                <p>
+                    Curry ramen combines the bold, spiced flavors of Japanese curry with the comforting warmth of a noodle soup. The rich, thick curry broth is usually served with toppings like sliced pork, vegetables, green onions, and a soft-boiled egg, creating a hearty and flavorful dish.s</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div id="footer-content">
+            <div id="footer-logo">
+                <img src="images/Realubit_LE3-On Typefaces_Project File white.png" alt="footer logo">
+            </div>
+
+            <div id="footer-text">
+                <p>Designed by: <strong>John Benedict P. Realubit</strong></p>
+                <p>Email: <a href="202311227@fit.edu.ph">202311227@fit.edu.ph</a></p>
+                <p>&copy; 2024 Mesiagareh Ramen. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
